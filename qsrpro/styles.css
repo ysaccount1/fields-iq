@@ -1108,19 +1108,19 @@ section {
 }
 
 .fade-in-up {
-    animation: fadeInUp 0.6s ease-out forwards;
+    animation: fadeInUp 1s ease-out forwards;
 }
 
 .slide-in-left {
-    animation: slideInLeft 0.6s ease-out forwards;
+    animation: slideInLeft 1s ease-out forwards;
 }
 
 .slide-in-right {
-    animation: slideInRight 0.6s ease-out forwards;
+    animation: slideInRight 1s ease-out forwards;
 }
 
 .scale-in {
-    animation: scaleIn 0.6s ease-out forwards;
+    animation: scaleIn 1s ease-out forwards;
 }
 
 .pulse {
@@ -1137,28 +1137,28 @@ section {
 
 /* Hero title animation */
 .hero-title {
-    animation: slideInLeft 0.8s ease-out;
+    animation: slideInLeft 1.2s ease-out;
 }
 
 .hero-description {
-    animation: slideInLeft 0.8s ease-out 0.2s both;
+    animation: slideInLeft 1.2s ease-out 0.3s both;
 }
 
 .hero-buttons {
-    animation: slideInLeft 0.8s ease-out 0.4s both;
+    animation: slideInLeft 1.2s ease-out 0.6s both;
 }
 
 .hero-stats {
-    animation: slideInLeft 0.8s ease-out 0.6s both;
+    animation: slideInLeft 1.2s ease-out 0.9s both;
 }
 
 .hero-image {
-    animation: slideInRight 0.8s ease-out 0.2s both;
+    animation: slideInRight 1.2s ease-out 0.3s both;
 }
 
 /* Phone mockup animation */
 .phone-mockup {
-    animation: scaleIn 0.8s ease-out 0.4s both;
+    animation: scaleIn 1.2s ease-out 0.6s both;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
@@ -1175,50 +1175,50 @@ section {
 
 /* Feature cards staggered animation */
 .feature-card {
-    animation: fadeInUp 0.6s ease-out forwards;
+    animation: fadeInUp 1s ease-out forwards;
     opacity: 0;
 }
 
-.feature-card:nth-child(1) { animation-delay: 0.1s; }
-.feature-card:nth-child(2) { animation-delay: 0.2s; }
-.feature-card:nth-child(3) { animation-delay: 0.3s; }
-.feature-card:nth-child(4) { animation-delay: 0.4s; }
-.feature-card:nth-child(5) { animation-delay: 0.5s; }
-.feature-card:nth-child(6) { animation-delay: 0.6s; }
+.feature-card:nth-child(1) { animation-delay: 0.2s; }
+.feature-card:nth-child(2) { animation-delay: 0.4s; }
+.feature-card:nth-child(3) { animation-delay: 0.6s; }
+.feature-card:nth-child(4) { animation-delay: 0.8s; }
+.feature-card:nth-child(5) { animation-delay: 1s; }
+.feature-card:nth-child(6) { animation-delay: 1.2s; }
 
 /* Step items staggered animation */
 .step-item {
-    animation: fadeInUp 0.6s ease-out forwards;
+    animation: fadeInUp 1s ease-out forwards;
     opacity: 0;
 }
 
-.step-item:nth-child(1) { animation-delay: 0.1s; }
-.step-item:nth-child(2) { animation-delay: 0.2s; }
-.step-item:nth-child(3) { animation-delay: 0.3s; }
-.step-item:nth-child(4) { animation-delay: 0.4s; }
+.step-item:nth-child(1) { animation-delay: 0.2s; }
+.step-item:nth-child(2) { animation-delay: 0.4s; }
+.step-item:nth-child(3) { animation-delay: 0.6s; }
+.step-item:nth-child(4) { animation-delay: 0.8s; }
 
 /* Equipment items staggered animation */
 .equipment-item {
-    animation: fadeInUp 0.6s ease-out forwards;
+    animation: fadeInUp 1s ease-out forwards;
     opacity: 0;
 }
 
-.equipment-item:nth-child(1) { animation-delay: 0.1s; }
-.equipment-item:nth-child(2) { animation-delay: 0.2s; }
-.equipment-item:nth-child(3) { animation-delay: 0.3s; }
-.equipment-item:nth-child(4) { animation-delay: 0.4s; }
-.equipment-item:nth-child(5) { animation-delay: 0.5s; }
-.equipment-item:nth-child(6) { animation-delay: 0.6s; }
+.equipment-item:nth-child(1) { animation-delay: 0.2s; }
+.equipment-item:nth-child(2) { animation-delay: 0.4s; }
+.equipment-item:nth-child(3) { animation-delay: 0.6s; }
+.equipment-item:nth-child(4) { animation-delay: 0.8s; }
+.equipment-item:nth-child(5) { animation-delay: 1s; }
+.equipment-item:nth-child(6) { animation-delay: 1.2s; }
 
 /* Vision cards staggered animation */
 .vision-card {
-    animation: fadeInUp 0.6s ease-out forwards;
+    animation: fadeInUp 1s ease-out forwards;
     opacity: 0;
 }
 
-.vision-card:nth-child(1) { animation-delay: 0.1s; }
-.vision-card:nth-child(2) { animation-delay: 0.2s; }
-.vision-card:nth-child(3) { animation-delay: 0.3s; }
+.vision-card:nth-child(1) { animation-delay: 0.2s; }
+.vision-card:nth-child(2) { animation-delay: 0.4s; }
+.vision-card:nth-child(3) { animation-delay: 0.6s; }
 
 /* Diagnostic steps animation */
 .step {
