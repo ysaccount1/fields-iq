@@ -378,19 +378,19 @@ document.addEventListener('DOMContentLoaded', function () {
                         `;
                         diagnosticContent.appendChild(completionMsg);
 
-                        // Restart after 4 seconds
+                        // Restart after 2 seconds
                         setTimeout(() => {
                             completionMsg.remove();
                             currentFlowStep = 0;
                             updateFlowDisplay();
-                        }, 4000);
+                        }, 2000);
                     }, 1000);
                 }
             } else {
-                // Auto-advance to next step after 3 seconds
+                // Auto-advance to next step after 0.8 seconds
                 autoAdvanceTimer = setTimeout(() => {
                     advanceFlow(0); // Auto-select first option
-                }, 3000);
+                }, 800);
             }
         } else {
             // Manual mode: 5-second timer for user interaction
