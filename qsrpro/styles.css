@@ -885,6 +885,19 @@ section {
     margin-bottom: 1rem;
 }
 
+.footer-logo-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s ease;
+}
+
+.footer-logo-link:hover {
+    opacity: 0.8;
+}
+
 .footer-logo-img {
     height: 60px;
     width: auto;
