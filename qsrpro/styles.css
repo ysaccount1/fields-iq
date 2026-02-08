@@ -183,15 +183,6 @@ p {
     gap: 4px;
 }
 
-.nav-logo-sub::before {
-    content: '';
-    display: inline-block;
-    width: 4px;
-    height: 4px;
-    background: #2563EB;
-    border-radius: 50%;
-}
-
 .nav-logo i {
     color: #2563EB;
     font-size: 28px;
@@ -925,15 +916,6 @@ section {
     display: flex;
     align-items: center;
     gap: 4px;
-}
-
-.footer-logo-sub::before {
-    content: '';
-    display: inline-block;
-    width: 4px;
-    height: 4px;
-    background: #2563EB;
-    border-radius: 50%;
 }
 
 .footer-logo i {
