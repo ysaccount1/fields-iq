@@ -146,6 +146,26 @@ p {
     width: auto;
 }
 
+.nav-logo-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.nav-logo-main {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+}
+
+.nav-logo-sub {
+    font-size: 10px;
+    font-weight: 500;
+    color: #2563EB;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
 .nav-logo i {
     color: #2563EB;
     font-size: 28px;
@@ -833,6 +853,26 @@ section {
 .footer-logo-img {
     height: 40px;
     width: auto;
+}
+
+.footer-logo-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.footer-logo-main {
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+}
+
+.footer-logo-sub {
+    font-size: 10px;
+    font-weight: 500;
+    color: #2563EB;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .footer-logo i {
