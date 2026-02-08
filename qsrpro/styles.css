@@ -37,7 +37,7 @@ p {
 }
 
 .gradient-text {
-    background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+    background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -60,35 +60,35 @@ p {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+    background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
     color: white;
-    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
 }
 
 .btn-secondary {
-    background: rgba(255, 107, 53, 0.1);
-    color: #FF6B35;
-    border: 2px solid #FF6B35;
+    background: rgba(37, 99, 235, 0.1);
+    color: #2563EB;
+    border: 2px solid #2563EB;
 }
 
 .btn-secondary:hover {
-    background: #FF6B35;
+    background: #2563EB;
     color: white;
 }
 
 .btn-outline {
     background: transparent;
-    color: #FF6B35;
-    border: 2px solid #FF6B35;
+    color: #2563EB;
+    border: 2px solid #2563EB;
 }
 
 .btn-outline:hover {
-    background: #FF6B35;
+    background: #2563EB;
     color: white;
 }
 
@@ -98,7 +98,7 @@ p {
 }
 
 .cta-button {
-    background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+    background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
     color: white !important;
     padding: 10px 20px;
     border-radius: 6px;
@@ -141,8 +141,13 @@ p {
     color: #333;
 }
 
+.nav-logo-img {
+    height: 40px;
+    width: auto;
+}
+
 .nav-logo i {
-    color: #FF6B35;
+    color: #2563EB;
     font-size: 28px;
 }
 
@@ -162,7 +167,7 @@ p {
 }
 
 .nav-link:hover {
-    color: #FF6B35;
+    color: #2563EB;
 }
 
 .nav-link::after {
@@ -172,7 +177,7 @@ p {
     left: 0;
     width: 0;
     height: 2px;
-    background: #FF6B35;
+    background: #2563EB;
     transition: width 0.3s ease;
 }
 
@@ -254,7 +259,7 @@ p {
     display: block;
     font-size: 2rem;
     font-weight: 700;
-    color: #FF6B35;
+    color: #2563EB;
 }
 
 .stat-label {
@@ -305,7 +310,7 @@ p {
 .app-title {
     font-size: 24px;
     font-weight: 700;
-    color: #FF6B35;
+    color: #2563EB;
     margin-bottom: 5px;
 }
 
@@ -341,13 +346,13 @@ p {
 }
 
 .step.active {
-    background: #fff3e0;
-    color: #e65100;
-    border: 2px solid #FF6B35;
+    background: #EFF6FF;
+    color: #1D4ED8;
+    border: 2px solid #2563EB;
 }
 
 .step.active i {
-    color: #FF6B35;
+    color: #2563EB;
 }
 
 .step.branch {
@@ -381,7 +386,7 @@ p {
 
 .confidence-fill {
     height: 100%;
-    background: linear-gradient(90deg, #FF6B35, #F7931E);
+    background: linear-gradient(90deg, #2563EB, #1D4ED8);
     border-radius: 4px;
     transition: width 0.3s ease;
 }
@@ -469,7 +474,7 @@ section {
 .feature-icon {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+    background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -526,7 +531,7 @@ section {
     transform: translateX(-50%);
     width: 40px;
     height: 40px;
-    background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+    background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -554,7 +559,7 @@ section {
 
 .step-visual i {
     font-size: 3rem;
-    color: #FF6B35;
+    color: #2563EB;
 }
 
 /* Equipment Section */
@@ -602,7 +607,7 @@ section {
 
 /* Early Access Section */
 .early-access {
-    background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+    background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
     color: white;
 }
 
@@ -724,7 +729,7 @@ section {
     transform: translateX(-50%);
     width: 40px;
     height: 40px;
-    background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+    background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -771,7 +776,7 @@ section {
 .contact-icon {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+    background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -825,8 +830,13 @@ section {
     margin-bottom: 1rem;
 }
 
+.footer-logo-img {
+    height: 40px;
+    width: auto;
+}
+
 .footer-logo i {
-    color: #FF6B35;
+    color: #2563EB;
     font-size: 28px;
 }
 
@@ -849,13 +859,13 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #FF6B35;
+    color: #2563EB;
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
 .social-link:hover {
-    background: #FF6B35;
+    background: #2563EB;
     color: white;
     transform: translateY(-2px);
 }
@@ -881,7 +891,7 @@ section {
 }
 
 .footer-links a:hover {
-    color: #FF6B35;
+    color: #2563EB;
 }
 
 .footer-bottom {
@@ -910,7 +920,7 @@ section {
 }
 
 .footer-legal a:hover {
-    color: #FF6B35;
+    color: #2563EB;
 }
 
 /* Responsive Design */
@@ -1159,7 +1169,7 @@ section {
 /* Stat numbers animation */
 .stat-number {
     font-weight: 700;
-    color: #FF6B35;
+    color: #2563EB;
     animation: pulse 2s ease-in-out infinite;
 }
 
@@ -1263,7 +1273,7 @@ section {
 }
 
 .progress-percent {
-    color: #FF6B35;
+    color: #2563EB;
     font-weight: 700;
 }
 
@@ -1276,7 +1286,7 @@ section {
 
 .progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, #FF6B35, #F7931E);
+    background: linear-gradient(90deg, #2563EB, #1D4ED8);
     border-radius: 3px;
     transition: width 0.5s ease;
 }
@@ -1294,7 +1304,7 @@ section {
     background: #f8f9fa;
     padding: 15px;
     border-radius: 10px;
-    border-left: 4px solid #FF6B35;
+    border-left: 4px solid #2563EB;
 }
 
 .step-title-display {
@@ -1308,7 +1318,7 @@ section {
 }
 
 .step-title-display i {
-    color: #FF6B35;
+    color: #2563EB;
     font-size: 16px;
 }
 
@@ -1342,9 +1352,9 @@ section {
 }
 
 .action-btn:hover {
-    border-color: #FF6B35;
-    background: #fff3e0;
-    color: #FF6B35;
+    border-color: #2563EB;
+    background: #EFF6FF;
+    color: #2563EB;
 }
 
 .action-btn i {
@@ -1447,3 +1457,4 @@ section {
     border-color: #dc3545;
     color: white;
 }
+
