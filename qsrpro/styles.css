@@ -889,7 +889,6 @@ section {
 }
 
 .footer-logo-img {
-.footer-logo-img {
     height: 120px;
     width: auto;
 }
@@ -1122,6 +1121,17 @@ section {
     from {
         opacity: 0;
         transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
