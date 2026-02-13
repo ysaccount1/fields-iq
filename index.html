@@ -120,15 +120,16 @@
             flex-direction: column;
             justify-content: flex-start;
             position: relative;
-            padding-top: 60px;
+            padding-top: 0;
         }
 
         .logo-top-right {
-            position: absolute;
-            top: 60px;
-            left: 0;
-            height: 80px;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            height: 60px;
             width: auto;
+            z-index: 1000;
         }
 
         .hero-video {
@@ -193,6 +194,14 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+        }
+
+        .title-separator {
+            display: inline-block;
+            margin: 0 0.5rem;
+            color: var(--primary-color);
+            font-size: 0.8em;
+            opacity: 0.6;
         }
 
         .hero-description {
@@ -364,7 +373,12 @@
         @media (max-width: 768px) {
             .hero-content {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                gap: 0.5rem;
+            }
+
+            .hero-video {
+                order: -1;
+                margin-bottom: 0.5rem;
             }
 
             .hero-title {
@@ -466,12 +480,12 @@
 <body>
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <img src="assets/logo/FieldsIQ logo.png" alt="Fields-IQ Logo" class="logo-top-right">
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <img src="assets/logo/FieldsIQ logo.png" alt="Fields-IQ Logo" class="logo-top-right">
                     <h1 class="hero-title">
-                        ClarityFlow — 
+                        ClarityFlow <span class="title-separator">✦</span>
                         <span class="gradient-text">Deterministic Workflows</span> 
                         for Device Activation
                     </h1>
