@@ -71,70 +71,19 @@
 
         /* Navigation */
         .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            transition: all 0.3s ease;
+            display: none;
         }
 
         .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 70px;
+            display: none;
         }
 
         .nav-logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 20px;
-            font-weight: 700;
-            color: var(--text-dark);
-            text-decoration: none;
-        }
-
-        .nav-logo img {
-            height: 50px;
-            width: auto;
+            display: none;
         }
 
         .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .nav-link {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-link:hover {
-            color: var(--primary-color);
-        }
-
-        .cta-button {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-            color: white !important;
-            padding: 10px 20px;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+            display: none;
         }
 
         /* Hero Section */
@@ -145,7 +94,9 @@
             position: relative;
             background: linear-gradient(135deg, #f0f4ff 0%, #e8f0ff 100%);
             overflow: hidden;
-            margin-top: 70px;
+            margin-top: 0;
+            padding-top: 0;
+            padding-bottom: 20px;
         }
 
         .hero-container {
@@ -159,15 +110,81 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
+            align-items: flex-start;
+            min-height: auto;
+            padding: 20px 0;
+        }
+
+        .hero-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            position: relative;
+            padding-top: 60px;
+        }
+
+        .logo-top-right {
+            position: absolute;
+            top: 60px;
+            left: 0;
+            height: 80px;
+            width: auto;
+        }
+
+        .hero-video {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .video-wrapper {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 45px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            position: relative;
+        }
+
+        .play-button-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            display: flex;
             align-items: center;
-            min-height: 80vh;
+            justify-content: center;
+            z-index: 10;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        .play-button-overlay.hidden {
+            display: none;
+        }
+
+        .play-button-overlay::after {
+            content: '▶';
+            font-size: 40px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-left: 4px;
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
         .hero-title {
             font-size: 3.5rem;
             font-weight: 800;
             line-height: 1.1;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             color: var(--text-dark);
         }
 
@@ -179,16 +196,17 @@
         }
 
         .hero-description {
-            font-size: 1.25rem;
+            font-size: 1.1rem;
             color: var(--text-light);
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             line-height: 1.6;
         }
 
         .hero-buttons {
             display: flex;
             gap: 1rem;
-            margin-bottom: 3rem;
+            margin-bottom: 0;
+            justify-content: center;
         }
 
         .btn {
@@ -226,54 +244,6 @@
         .btn-secondary:hover {
             background: var(--primary-color);
             color: white;
-        }
-
-        /* Demo Section */
-        .demo-section {
-            background: white;
-            padding: 80px 0;
-        }
-
-        .demo-container {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--text-dark);
-            margin-bottom: 1rem;
-        }
-
-        .section-description {
-            font-size: 1.2rem;
-            color: var(--text-light);
-            margin-bottom: 3rem;
-        }
-
-        .video-container {
-            position: relative;
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .video-container video {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .video-caption {
-            font-size: 1rem;
-            color: var(--text-light);
-            margin-top: 1.5rem;
-            font-style: italic;
         }
 
         /* Value Proposition Section */
@@ -494,26 +464,12 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="/" class="nav-logo">
-                <img src="assets/logo/FieldsIQ logo.png" alt="Fields-IQ Logo">
-            </a>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#demo" class="nav-link">Solutions</a></li>
-                <li><a href="#value" class="nav-link">About</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <div>
+                <div class="hero-text">
+                    <img src="assets/logo/FieldsIQ logo.png" alt="Fields-IQ Logo" class="logo-top-right">
                     <h1 class="hero-title">
                         ClarityFlow — 
                         <span class="gradient-text">Deterministic Workflows</span> 
@@ -524,31 +480,22 @@
                         Eliminate guesswork with deterministic logic.
                     </p>
                     <div class="hero-buttons">
-                        <a href="#demo" class="btn btn-primary">
-                            <i class="fas fa-play"></i>
-                            Watch Demo
-                        </a>
                         <a href="#contact" class="btn btn-secondary">
                             <i class="fas fa-envelope"></i>
                             Get in Touch
                         </a>
                     </div>
                 </div>
+                <div class="hero-video">
+                    <div class="video-wrapper">
+                        <div class="play-button-overlay" id="playButtonOverlay"></div>
+                        <video id="demoVideo" controls>
+                            <source src="assets/videos/demo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Demo Section -->
-    <section id="demo" class="demo-section">
-        <div class="demo-container">
-            <h2 class="section-title">See ClarityFlow in Action</h2>
-            <div class="video-container">
-                <video controls>
-                    <source src="assets/videos/demo.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <p class="video-caption">Apple Watch Activation, reimagined with deterministic logic.</p>
         </div>
     </section>
 
@@ -597,5 +544,27 @@
     </footer>
 
     <script src="assets/js/script.js"></script>
+    <script>
+        const playButtonOverlay = document.getElementById('playButtonOverlay');
+        const demoVideo = document.getElementById('demoVideo');
+
+        if (playButtonOverlay && demoVideo) {
+            playButtonOverlay.addEventListener('click', function(e) {
+                e.stopPropagation();
+                demoVideo.play();
+                playButtonOverlay.classList.add('hidden');
+            });
+
+            demoVideo.addEventListener('play', function() {
+                playButtonOverlay.classList.add('hidden');
+            });
+
+            demoVideo.addEventListener('pause', function() {
+                if (demoVideo.currentTime === 0) {
+                    playButtonOverlay.classList.remove('hidden');
+                }
+            });
+        }
+    </script>
 </body>
 </html>
