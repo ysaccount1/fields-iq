@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QSRPro - Troubleshooting Platform for Quick-Service Restaurants</title>
+    <meta name="description" content="Revolutionary troubleshooting platform for QSR equipment. Get instant solutions, step-by-step guidance, and expert support for all your restaurant equipment.">
+    <meta name="keywords" content="QSR troubleshooting, restaurant equipment repair, fryer repair, ice cream machine, quick service restaurant, repair guide">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://qsrpro.app/">
+    <meta property="og:title" content="QSRPro - Troubleshooting Platform for Quick-Service Restaurants">
+    <meta property="og:description" content="Revolutionary troubleshooting platform for QSR equipment. Get instant solutions for all your restaurant equipment.">
+    <meta property="og:image" content="https://qsrpro.app/assets/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://qsrpro.app/">
+    <meta property="twitter:title" content="QSRPro - Troubleshooting Platform for Quick-Service Restaurants">
+    <meta property="twitter:description" content="Revolutionary troubleshooting platform for QSR equipment. Get instant solutions for all your restaurant equipment.">
+    <meta property="twitter:image" content="https://qsrpro.app/assets/og-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/qsrpro/styles.css">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="/" class="nav-logo-link">
+                    <img src="/qsrpro/logo.png" alt="QSRPro Logo" class="nav-logo-img">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#features" class="nav-link">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#how-it-works" class="nav-link">How It Works</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#equipment" class="nav-link">Equipment</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#early-access" class="nav-link cta-button">Early Access</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Fix QSR Equipment with 
+                        <span class="gradient-text">Guided Troubleshooting Flows</span>
+                    </h1>
+                    <p class="hero-description">
+                        Revolutionary troubleshooting platform designed specifically for quick-service restaurants. 
+                        Get step-by-step repair instructions, evidence capture, and technician collaboration - all powered by brand-specific flows.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#early-access" class="btn btn-primary">
+                            <i class="fas fa-play"></i>
+                            Join Early Access
+                        </a>
+                        <a href="#how-it-works" class="btn btn-secondary">
+                            <i class="fas fa-info-circle"></i>
+                            Learn More
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">100+</span>
+                            <span class="stat-label">Equipment Types</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Support</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">5min</span>
+                            <span class="stat-label">Avg Fix Time</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="phone-mockup">
+                        <div class="phone-screen">
+                            <div class="app-interface">
+                                <div class="app-header">
+                                    <img src="/qsrpro/logo.png" alt="QSRPro" class="app-logo">
+                                    <div class="app-subtitle">Fryer Not Heating</div>
+                                </div>
+                                
+                                <!-- Progress Bar -->
+                                <div class="progress-section">
+                                    <div class="progress-label">
+                                        <span class="progress-text">Step <span class="current-step">1</span> of <span class="total-steps">6</span></span>
+                                        <span class="progress-percent"><span class="percent-value">17</span>%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 17%"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Diagnostic Content -->
+                                <div class="diagnostic-content">
+                                    <div class="step-display">
+                                        <div class="step-title-display">
+                                            <i class="fas fa-play-circle"></i>
+                                            <span id="stepTitle">Check power supply</span>
+                                        </div>
+                                        <div class="step-description" id="stepDescription">
+                                            Verify that the fryer is plugged in and the outlet has power.
+                                        </div>
+                                    </div>
+
+                                    <!-- Action Buttons -->
+                                    <div class="step-actions" id="stepActions">
+                                        <button class="action-btn action-success">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yes, Working</span>
+                                        </button>
+                                        <button class="action-btn action-failure">
+                                            <i class="fas fa-times"></i>
+                                            <span>No, Failed</span>
+                                        </button>
+                                    </div>
+
+                                    <!-- Branch Decision (shown when needed) -->
+                                    <div class="branch-decision" id="branchDecision" style="display: none;">
+                                        <div class="branch-title">
+                                            <i class="fas fa-code-branch"></i>
+                                            <span>Element working?</span>
+                                        </div>
+                                        <div class="branch-options">
+                                            <button class="branch-btn branch-yes">
+                                                <i class="fas fa-check-circle"></i>
+                                                <span>Yes</span>
+                                            </button>
+                                            <button class="branch-btn branch-no">
+                                                <i class="fas fa-times-circle"></i>
+                                                <span>No</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Confidence Meter -->
+                                <div class="confidence-meter">
+                                    <div class="confidence-label">Confidence: <span id="confidenceValue">17</span>%</div>
+                                    <div class="confidence-bar">
+                                        <div class="confidence-fill" id="confidenceFill" style="width: 17%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-background">
+            <div class="floating-icon" style="top: 20%; left: 10%;">
+                <i class="fas fa-fire"></i>
+            </div>
+            <div class="floating-icon" style="top: 60%; right: 15%;">
+                <i class="fas fa-cog"></i>
+            </div>
+            <div class="floating-icon" style="bottom: 30%; left: 20%;">
+                <i class="fas fa-tools"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Powerful Features for QSR Operations</h2>
+                <p class="section-description">
+                    Built specifically for the realities of quick-service restaurant equipment management
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-list-check"></i>
+                    </div>
+                    <h3 class="feature-title">Guided Flows</h3>
+                    <p class="feature-description">
+                        Step-by-step troubleshooting flows aligned with major OEM specifications and franchise standards.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3 class="feature-title">Evidence Capture</h3>
+                    <p class="feature-description">
+                        Document issues with photos and notes for faster escalation and resolution tracking.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Mobile-First</h3>
+                    <p class="feature-description">
+                        Access troubleshooting guides on-site with our responsive mobile application.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <h3 class="feature-title">Technician Collaboration</h3>
+                    <p class="feature-description">
+                        Contribute improvements and corrections to flows. Build institutional knowledge across your team.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="feature-title">Multi-Location Ready</h3>
+                    <p class="feature-description">
+                        Manage equipment troubleshooting across franchise groups and regional operators seamlessly.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="feature-title">Analytics & Insights</h3>
+                    <p class="feature-description">
+                        Track repair patterns, identify recurring issues, and optimize maintenance schedules.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How QSRPro Works</h2>
+                <p class="section-description">
+                    Get your equipment fixed in just a few simple steps
+                </p>
+            </div>
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Select Equipment</h3>
+                        <p class="step-description">
+                            Choose your equipment type and brand. QSRPro recognizes all major QSR equipment manufacturers.
+                        </p>
+                    </div>
+                    <div class="step-visual">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Describe the Issue</h3>
+                        <p class="step-description">
+                            Tell us what's wrong. Our system matches your issue to the most relevant troubleshooting flow.
+                        </p>
+                    </div>
+                    <div class="step-visual">
+                        <i class="fas fa-comment-dots"></i>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Follow Guided Steps</h3>
+                        <p class="step-description">
+                            Get clear, actionable instructions with photos and safety warnings for each diagnostic step.
+                        </p>
+                    </div>
+                    <div class="step-visual">
+                        <i class="fas fa-list-ol"></i>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Document & Resolve</h3>
+                        <p class="step-description">
+                            Capture evidence, document your findings, and escalate if needed. Track resolution status in real-time.
+                        </p>
+                    </div>
+                    <div class="step-visual">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Supported Equipment -->
+    <section id="equipment" class="equipment">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Supported Equipment</h2>
+                <p class="section-description">
+                    We support troubleshooting for all major QSR equipment categories
+                </p>
+            </div>
+            <div class="equipment-grid">
+                <div class="equipment-item">
+                    <div class="equipment-icon">🍟</div>
+                    <h3>Fryers</h3>
+                    <p>Deep fryers, pressure fryers, open pot fryers from all major brands</p>
+                </div>
+                <div class="equipment-item">
+                    <div class="equipment-icon">🍦</div>
+                    <h3>Ice Cream Machines</h3>
+                    <p>Soft serve machines, ice cream dispensers, freezers</p>
+                </div>
+                <div class="equipment-item">
+                    <div class="equipment-icon">🔥</div>
+                    <h3>Grills & Griddles</h3>
+                    <p>Flat top grills, char grills, griddles, broilers</p>
+                </div>
+                <div class="equipment-item">
+                    <div class="equipment-icon">🌡️</div>
+                    <h3>Refrigeration</h3>
+                    <p>Walk-in coolers, reach-in refrigerators, freezers, prep tables</p>
+                </div>
+                <div class="equipment-item">
+                    <div class="equipment-icon">🍕</div>
+                    <h3>Ovens</h3>
+                    <p>Conveyor ovens, deck ovens, combination ovens, warmers</p>
+                </div>
+                <div class="equipment-item">
+                    <div class="equipment-icon">🧊</div>
+                    <h3>Beverage Systems</h3>
+                    <p>Soda fountains, ice makers, beverage dispensers, coffee machines</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Early Access Section -->
+    <section id="early-access" class="early-access">
+        <div class="container">
+            <div class="early-access-content">
+                <div class="early-access-text">
+                    <h2 class="early-access-title">Be the First to Use QSRPro</h2>
+                    <p class="early-access-description">
+                        We're onboarding early partners now. Join franchise owners and technicians who are already 
+                        fixing equipment faster with QSRPro.
+                    </p>
+                    <div class="early-access-benefits">
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Early access to all features</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Dedicated onboarding support</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Lifetime early adopter pricing</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Direct input on product roadmap</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="early-access-form" id="earlyAccessForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="company" name="company" placeholder="Company Name">
+                    </div>
+                    <div class="form-group">
+                        <select id="role" name="role" required>
+                            <option value="">Select Your Role</option>
+                            <option value="franchise_owner">Franchise Owner</option>
+                            <option value="technician">Technician</option>
+                            <option value="regional_operator">Regional Operator</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="locations" name="locations" placeholder="Number of Locations" min="1">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large">
+                        <i class="fas fa-paper-plane"></i>
+                        Join Early Access
+                    </button>
+                    <p class="form-note">We'll be in touch within 24 hours.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="vision">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Built for the Realities of QSR Operations</h2>
+                <p class="section-description">
+                    QSRPro is designed with input from franchise owners, technicians, and regional operators
+                </p>
+            </div>
+            <div class="vision-grid">
+                <div class="vision-card">
+                    <div class="vision-number">1</div>
+                    <h3>No Guesswork</h3>
+                    <p>Clear, step-by-step flows eliminate confusion and reduce downtime. Every technician follows the same proven process.</p>
+                </div>
+                <div class="vision-card">
+                    <div class="vision-number">2</div>
+                    <h3>Brand-Specific</h3>
+                    <p>Flows are aligned with major OEM specifications and franchise standards. Get accurate guidance for your exact equipment.</p>
+                </div>
+                <div class="vision-card">
+                    <div class="vision-number">3</div>
+                    <h3>Continuous Improvement</h3>
+                    <p>Technicians contribute corrections and improvements. Future OEM validation ensures accuracy at scale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="section-description">
+                    Have questions? We're here to help you get the most out of QSRPro
+                </p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email Us</h3>
+                            <p>support@qsrpro.app</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Call Us</h3>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Visit Us</h3>
+                            <p>123 Tech Street<br>San Francisco, CA 94105</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="contact-name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="contact-email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="contact-subject" name="subject" required>
+                            <option value="">Select Subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="support">Technical Support</option>
+                            <option value="sales">Sales Question</option>
+                            <option value="partnership">Partnership</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="contact-message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <a href="/" class="footer-logo-link">
+                            <img src="/qsrpro/logo.png" alt="QSRPro Logo" class="footer-logo-img">
+                        </a>
+                    </div>
+                    <p class="footer-description">
+                        Revolutionary troubleshooting platform for quick-service restaurants. 
+                        Fix equipment faster with guided flows.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Product</h3>
+                    <ul class="footer-links">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#equipment">Equipment</a></li>
+                        <li><a href="#early-access">Early Access</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="/qsrpro/privacy.html">Privacy Policy</a></li>
+                        <li><a href="/qsrpro/disclaimer.html">Legal Disclaimer</a></li>
+                        <li><a href="/qsrpro/terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="/qsrpro/delete-data.html">Data Deletion</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2026 QSRPro. All rights reserved. QSRPro is part of the DiagPro platform family.</p>
+                </div> Service</a>
+                    <a href="#">Delete Data</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/qsrpro/script.js"></script>
+</body>
+</html>

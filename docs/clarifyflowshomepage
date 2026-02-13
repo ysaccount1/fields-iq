@@ -1,0 +1,24 @@
+3. fields‑iq.com 首页结构（你可以直接交给 Webflow 或 Next.js）
+[Header]
+  Logo: Fields‑IQ
+  Nav: Solutions | About | Contact
+[Hero Section]
+  Title: ClarityFlow — Deterministic Workflows for Device Activation
+  Subtitle: A unified activation engine for carriers, retailers, and service providers.
+  CTA: Watch Demo
+
+[Demo Section]
+  Embedded 20–30s video
+  Caption: Apple Watch Activation, reimagined with deterministic logic.
+
+[Value Proposition Section]
+  • Deterministic workflows that eliminate guesswork  
+  • Cross‑carrier, cross‑device activation logic  
+  • Easy integration via WebView, SDK, or API  
+
+[Contact Section]
+  Title: Get in touch
+  Text: Interested in exploring ClarityFlow for your activation or troubleshooting workflows?
+  Email: contact@fields-iq.com
+[Footer]
+  Fields‑IQ LLC © 2026
