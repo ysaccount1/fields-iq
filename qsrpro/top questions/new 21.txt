@@ -1,0 +1,238 @@
+⭐ Top 8 Questions You Should Ask Subway Staff (QSRPro‑focused)
+1. “When something stops working, what do you usually do first?”
+This reveals:
+• 	Real behavior
+• 	Guessing
+• 	Improvisation
+• 	Lack of training
+• 	Inconsistent troubleshooting
+Perfect for validating your deterministic engine.
+
+2. “Which equipment gives you the most trouble?”
+This identifies:
+• 	High‑frequency failures
+• 	High‑impact devices
+• 	Where to build flows first
+Subway‑specific examples:
+• 	Toaster oven
+• 	Bread proofer
+• 	Refrigerator
+• 	POS
+• 	Soda machine
+
+3. “Do you feel confident fixing things, or do you usually wait for someone else?”
+This reveals:
+• 	Confidence gaps
+• 	Training gaps
+• 	Dependency on managers
+• 	Opportunity for self‑service troubleshooting
+
+4. “How long does it usually take to get help when something breaks?”
+This exposes:
+• 	Downtime
+• 	Delays
+• 	Escalation friction
+• 	Manager bottlenecks
+This is where QSRPro shines.
+
+5. “Do different managers tell you different ways to fix the same problem?”
+This reveals:
+• 	Inconsistency
+• 	Tribal knowledge
+• 	Lack of standardization
+• 	Need for a single source of truth
+This is your strongest value proposition.
+
+6. “Has a broken machine ever slowed down the line or made customers wait?”
+This reveals:
+• 	Real business impact
+• 	Lost sales
+• 	Stress
+• 	Operational pain
+Perfect for ROI conversations later.
+
+7. “If you could scan a code and get step‑by‑step instructions to fix something, would that help your shift?”
+This tests:
+• 	Adoption
+• 	Willingness
+• 	Relevance
+• 	Product‑market fit
+Crew members almost always say yes.
+
+8. “What’s the most frustrating thing that breaks or stops working?”
+This gives you:
+• 	Emotional truth
+• 	Priority ranking
+• 	Real pain points
+• 	High‑value flows to build first
+Emotion drives adoption.
+
+Absolutely — here are the strongest, highest‑signal questions to ask after you show QSRPro to a Subway staff member.
+These questions are designed to:
+	• Validate product‑market fit
+	• Reveal adoption blockers
+	• Surface real operational pain
+	• Understand their mental model
+	• Measure willingness to use
+	• Identify the “aha moment”
+And they’re written in simple, natural language that works in a busy store.
+
+⭐ Top Questions to Ask After Showing QSRPro
+1. “Would this actually help you during a busy shift?”
+This tells you:
+	• Real usefulness
+	• Real adoption likelihood
+	• Whether it fits their workflow
+Crew members are brutally honest here.
+
+2. “Is this faster than what you normally do when something breaks?”
+This reveals:
+	• Speed advantage
+	• Whether QSRPro beats their current behavior
+	• Whether it reduces waiting or guessing
+Speed is everything in QSR.
+
+3. “Would you use this instead of asking the manager?”
+This exposes:
+	• Confidence
+	• Trust
+	• Independence
+	• Manager bottlenecks
+If they say yes, you’ve won.
+
+4. “Is anything confusing or unclear in the steps?”
+This helps you refine:
+	• UI
+	• Language
+	• Step clarity
+	• Flow structure
+Crew feedback here is gold.
+
+5. “Which equipment would you want this for first?”
+This gives you:
+	• Priority devices
+	• High‑frequency failures
+	• High‑impact flows to build next
+Subway‑specific examples often include:
+	• Toaster oven
+	• Bread proofer
+	• POS
+	• Refrigerator
+	• Soda machine
+
+6. “Would you trust this enough to follow it during a rush?”
+This measures:
+	• Reliability perception
+	• Stress‑test adoption
+	• Real‑world usability
+If they say yes, that’s a huge signal.
+
+7. “Do you think other crew members would use this?”
+This reveals:
+	• Social adoption
+	• Peer influence
+	• Cultural fit
+	• Whether it spreads organically
+Crew members know their coworkers better than managers do.
+
+8. “What’s one thing you would change to make this easier for you?”
+This gives you:
+	• UX improvements
+	• Language tweaks
+	• Flow simplification
+	• Real user needs
+This is where you get the best actionable insights.
+
+⭐ Bonus: Two questions that reveal deep truth
+9. “Does this make your job less stressful?”
+If they say yes → you have emotional product‑market fit.
+10. “Would you scan this even if the manager isn’t around?”
+If they say yes → you have independent adoption.
+
+⭐ If you want, I can also create:
+✔ A full Subway staff interview script
+✔ A manager‑focused follow‑up script
+✔ A supervisor‑focused follow‑up script
+✔ A 10‑minute in‑store research plan
+✔ A Subway equipment priority list
+✔ A Subway‑specific QSRPro pitch
+Just tell me what you want next.
+
+Absolutely — here are additional, high‑leverage questions you should ask after showing QSRPro to a Subway staff member.
+These questions go deeper than “Do you like it?” and uncover:
+	• Real adoption signals
+	• Real operational friction
+	• Real willingness to change behavior
+	• Real value perception
+	• Real blockers
+	• Real opportunities
+These are the kinds of questions that give you founder‑level insight, not surface‑level feedback.
+
+⭐ Category 1 — Adoption & Behavior Change
+1. “Would you actually use this during a real shift?”
+This cuts through politeness and gets to real behavior.
+2. “When would you use this the most?”
+This reveals the highest‑value moments (rush, closing, opening, mid‑shift).
+3. “Would you remember to scan the code when something breaks?”
+This tests habit formation.
+4. “Is there anything that would stop you from using this?”
+This uncovers hidden blockers.
+
+⭐ Category 2 — Workflow Integration
+5. “Where should the QR code be placed so you’ll actually scan it?”
+This gives you real deployment strategy.
+6. “Would you prefer this on your phone, or just scanning a code in the store?”
+This tells you whether BYOD is viable.
+7. “Do you want this to be faster, or more detailed?”
+This reveals their tolerance for complexity.
+
+⭐ Category 3 — Trust & Confidence
+8. “Do you trust the steps enough to follow them without asking the manager?”
+This is a huge signal of product‑market fit.
+9. “Would you feel confident fixing something with this even if you’ve never done it before?”
+This tests whether QSRPro reduces fear and uncertainty.
+10. “Does this feel safer than guessing?”
+This reveals emotional value.
+
+⭐ Category 4 — Pain Point Mapping
+11. “Which part of this would save you the most time?”
+This identifies your strongest value proposition.
+12. “Which equipment should we add next?”
+This gives you your roadmap.
+13. “What’s the last thing that broke that you wish this could fix?”
+This gives you real‑world flows to build.
+
+⭐ Category 5 — Social & Team Dynamics
+14. “Do you think other crew members would use this?”
+This reveals social adoption.
+15. “Would this make the manager’s job easier too?”
+This helps you understand how the tool spreads upward.
+16. “Would this reduce the number of times you have to ask for help?”
+This measures friction reduction.
+
+⭐ Category 6 — Emotional Insight (the deepest layer)
+17. “Does this make your shift feel less stressful?”
+If they say yes → emotional product‑market fit.
+18. “Would this help you avoid getting yelled at or blamed?”
+This is the real reason crew members adopt tools.
+19. “Does this make you feel more in control when something breaks?”
+This reveals empowerment — the strongest adoption driver.
+
+⭐ Category 7 — Future Vision
+20. “If this tool could do one more thing for you, what should it be?”
+This gives you roadmap insight without feature‑creep.
+21. “Would you want this for training new employees?”
+This tests whether QSRPro becomes part of onboarding.
+22. “Would you want this for every store you work at?”
+This reveals multi‑store expansion potential.
+
+⭐ If you want, I can also create:
+✔ A full Subway staff interview script (start → demo → follow‑up → close)
+✔ A manager‑focused follow‑up script
+✔ A supervisor / multi‑unit operator script
+✔ A 10‑minute in‑store research plan
+✔ A Subway‑specific equipment troubleshooting priority list
+✔ A Subway‑specific QSRPro pitch
+Just tell me which one you want next.
+
+
