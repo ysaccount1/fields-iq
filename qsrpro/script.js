@@ -1,22 +1,37 @@
 // QSRPro Website - JavaScript with Advanced Animations and Branching Logic
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Mobile Navigation Toggle
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
+    // Side Navigation Toggle
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const sideNav = document.querySelector('.side-navbar');
+    const navOverlay = document.querySelector('.nav-overlay');
 
-    if (hamburger) {
-        hamburger.addEventListener('click', function () {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
+    if (menuToggle && sideNav && navOverlay) {
+        menuToggle.addEventListener('click', function () {
+            menuToggle.classList.toggle('active');
+            sideNav.classList.toggle('active');
+            navOverlay.classList.toggle('active');
+            document.body.style.overflow = sideNav.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close side nav when clicking overlay
+        navOverlay.addEventListener('click', function () {
+            menuToggle.classList.remove('active');
+            sideNav.classList.remove('active');
+            navOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        // Close side nav when clicking on a link
+        document.querySelectorAll('.side-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                sideNav.classList.remove('active');
+                navOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
         });
     }
-
-    // Close mobile menu when clicking on a link
-    document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
-        if (hamburger) hamburger.classList.remove('active');
-        if (navMenu) navMenu.classList.remove('active');
-    }));
 
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -30,18 +45,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
             }
         });
-    });
-
-    // Navbar background on scroll
-    window.addEventListener('scroll', function () {
-        const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 50) {
-            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-            navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-        } else {
-            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-            navbar.style.boxShadow = 'none';
-        }
     });
 
     // Animate elements on scroll
@@ -153,11 +156,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 statNumbers.forEach(stat => {
                     const text = stat.textContent;
                     if (text.includes('+')) {
-                        const num = parseInt(text.replace('+', ''));
+                        const num = parseInt(text.replace('+', '').replace(',', ''));
                         stat.textContent = '0';
                         animateCounter(stat, num, 2000);
                         setTimeout(() => {
-                            stat.textContent = num + '+';
+                            if (num >= 1000) {
+                                stat.textContent = (num / 1000).toFixed(0) + ',000+';
+                            } else {
+                                stat.textContent = num + '+';
+                            }
                         }, 2000);
                     } else if (text.includes('%')) {
                         const num = parseInt(text.replace('%', ''));
@@ -474,14 +481,14 @@ document.addEventListener('DOMContentLoaded', function () {
         type();
     }
 
-    // Initialize typing effect after a delay
-    setTimeout(() => {
-        const heroTitle = document.querySelector('.hero-title');
-        if (heroTitle) {
-            const originalText = heroTitle.textContent;
-            typeWriter(heroTitle, originalText, 50);
-        }
-    }, 500);
+    // Typing effect disabled - would overwrite hero title content
+    // setTimeout(() => {
+    //     const heroTitle = document.querySelector('.hero-title');
+    //     if (heroTitle) {
+    //         const originalText = heroTitle.textContent;
+    //         typeWriter(heroTitle, originalText, 50);
+    //     }
+    // }, 500);
 
     // Add loading states to CTA buttons
     document.querySelectorAll('.btn-primary').forEach(btn => {
@@ -523,10 +530,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Keyboard navigation support
     document.addEventListener('keydown', (e) => {
-        // Close mobile menu on Escape
-        if (e.key === 'Escape' && navMenu && navMenu.classList.contains('active')) {
-            navMenu.classList.remove('active');
-            if (hamburger) hamburger.classList.remove('active');
+        // Close side menu on Escape
+        if (e.key === 'Escape' && sideNav && sideNav.classList.contains('active')) {
+            menuToggle.classList.remove('active');
+            sideNav.classList.remove('active');
+            navOverlay.classList.remove('active');
+            document.body.style.overflow = '';
         }
     });
 

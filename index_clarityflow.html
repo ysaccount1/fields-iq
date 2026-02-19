@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClarityFlow - Deterministic Workflows for Device Activation</title>
+    <meta name="description" content="ClarityFlow: A unified activation engine for carriers, retailers, and service providers. Deterministic workflows that eliminate guesswork.">
+    <meta name="keywords" content="device activation, workflow automation, carrier solutions, deterministic logic">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fields-iq.com/">
+    <meta property="og:title" content="ClarityFlow - Deterministic Workflows for Device Activation">
+    <meta property="og:description" content="A unified activation engine for carriers, retailers, and service providers.">
+    <meta property="og:image" content="https://fields-iq.com/assets/logo/FieldsIQ logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://fields-iq.com/">
+    <meta property="twitter:title" content="ClarityFlow - Deterministic Workflows for Device Activation">
+    <meta property="twitter:description" content="A unified activation engine for carriers, retailers, and service providers.">
+    <meta property="twitter:image" content="https://fields-iq.com/assets/logo/FieldsIQ logo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/logo/FieldsIQ logo.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Fields-IQ Specific Styles */
+        :root {
+            --primary-color: #2563EB;
+            --primary-dark: #1D4ED8;
+            --secondary-color: #FF6B35;
+            --text-dark: #1a1a1a;
+            --text-light: #666;
+            --bg-light: #f8f9fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        .navbar {
+            display: none;
+        }
+
+        .nav-container {
+            display: none;
+        }
+
+        .nav-logo {
+            display: none;
+        }
+
+        .nav-menu {
+            display: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: linear-gradient(135deg, #f0f4ff 0%, #e8f0ff 100%);
+            overflow: hidden;
+            margin-top: 0;
+            padding-top: 0;
+            padding-bottom: 20px;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: flex-start;
+            min-height: auto;
+            padding: 20px 0;
+        }
+
+        .hero-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            position: relative;
+            padding-top: 0;
+        }
+
+        .logo-top-right {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            height: 60px;
+            width: auto;
+            z-index: 1000;
+        }
+
+        .hero-video {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .video-wrapper {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 45px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            position: relative;
+        }
+
+        .play-button-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        .play-button-overlay.hidden {
+            display: none;
+        }
+
+        .play-button-overlay::after {
+            content: '▶';
+            font-size: 40px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-left: 4px;
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .hero-title {
+            font-size: 2rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .title-separator {
+            display: inline-block;
+            margin: 0 0.5rem;
+            color: var(--primary-color);
+            font-size: 0.8em;
+            opacity: 0.6;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 0;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+        }
+
+        .btn-secondary {
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Value Proposition Section */
+        .value-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 80px 0;
+        }
+
+        .value-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .value-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .value-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .value-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .value-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .value-card p {
+            font-size: 1rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .contact-text {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .contact-email {
+            display: inline-block;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .contact-email:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-copyright {
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+
+            .hero-video {
+                order: -1;
+                margin-bottom: 0.5rem;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .nav-menu {
+                gap: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .value-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+
+            .logo-top-right {
+                top: 5px;
+                left: 5px;
+                height: 50px;
+            }
+        }
+
+        /* Animations */
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-title {
+            animation: slideInLeft 1.2s ease-out;
+        }
+
+        .hero-description {
+            animation: slideInLeft 1.2s ease-out 0.3s both;
+        }
+
+        .hero-buttons {
+            animation: slideInLeft 1.2s ease-out 0.6s both;
+        }
+
+        .value-card {
+            animation: fadeInUp 1s ease-out forwards;
+            opacity: 0;
+        }
+
+        .value-card:nth-child(1) { animation-delay: 0.2s; }
+        .value-card:nth-child(2) { animation-delay: 0.4s; }
+        .value-card:nth-child(3) { animation-delay: 0.6s; }
+
+        section {
+            scroll-margin-top: 70px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <img src="assets/logo/FieldsIQ logo.png" alt="Fields-IQ Logo" class="logo-top-right">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-subtitle">
+                        <span class="gradient-text">ClarityFlow ✦ Deterministic Workflows</span>
+                    </h1>
+                    <h2 class="hero-subtitle">Device Activation & Setup</h2>
+                    <p class="hero-description">
+                        A unified activation engine for carriers, retailers, and service providers. 
+                        Eliminate guesswork with deterministic logic.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fas fa-envelope"></i>
+                            Get in Touch
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-video">
+                    <div class="video-wrapper">
+                        <div class="play-button-overlay" id="playButtonOverlay"></div>
+                        <video id="demoVideo" controls>
+                            <source src="assets/videos/demo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition Section -->
+    <section id="value" class="value-section">
+        <div class="value-container">
+            <h2 class="value-title">Why ClarityFlow</h2>
+            <div class="value-grid">
+                <div class="value-card">
+                    <div class="value-icon">✓</div>
+                    <h3>Deterministic Workflows</h3>
+                    <p>Eliminate guesswork with workflows that follow predictable, logical paths. Every activation follows the same proven process.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🔄</div>
+                    <h3>Cross-Carrier, Cross-Device</h3>
+                    <p>Unified activation logic that works seamlessly across carriers, retailers, and service providers with different device types.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">⚡</div>
+                    <h3>Easy Integration</h3>
+                    <p>Integrate via WebView, SDK, or API. Get up and running quickly with minimal development overhead.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <h2 class="contact-title">Get in Touch</h2>
+            <p class="contact-text">
+                Interested in exploring ClarityFlow for your activation or troubleshooting workflows?
+            </p>
+            <a href="mailto:contact@fields-iq.com" class="contact-email">
+                contact@fields-iq.com
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-copyright">&copy; 2026 Fields-IQ LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script>
+        const playButtonOverlay = document.getElementById('playButtonOverlay');
+        const demoVideo = document.getElementById('demoVideo');
+
+        if (playButtonOverlay && demoVideo) {
+            playButtonOverlay.addEventListener('click', function(e) {
+                e.stopPropagation();
+                demoVideo.play();
+                playButtonOverlay.classList.add('hidden');
+            });
+
+            demoVideo.addEventListener('play', function() {
+                playButtonOverlay.classList.add('hidden');
+            });
+
+            demoVideo.addEventListener('pause', function() {
+                if (demoVideo.currentTime === 0) {
+                    playButtonOverlay.classList.remove('hidden');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

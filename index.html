@@ -3,26 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClarityFlow - Deterministic Workflows for Device Activation</title>
-    <meta name="description" content="ClarityFlow: A unified activation engine for carriers, retailers, and service providers. Deterministic workflows that eliminate guesswork.">
-    <meta name="keywords" content="device activation, workflow automation, carrier solutions, deterministic logic">
+    <title>QSRPro - Troubleshooting Platform for Quick-Service Restaurants</title>
+    <meta name="description" content="Revolutionary troubleshooting platform for QSR equipment. Get instant solutions, step-by-step guidance, and expert support for all your restaurant equipment.">
+    <meta name="keywords" content="QSR troubleshooting, restaurant equipment repair, fryer repair, ice cream machine, quick service restaurant, repair guide">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://fields-iq.com/">
-    <meta property="og:title" content="ClarityFlow - Deterministic Workflows for Device Activation">
-    <meta property="og:description" content="A unified activation engine for carriers, retailers, and service providers.">
-    <meta property="og:image" content="https://fields-iq.com/assets/logo/FieldsIQ logo.png">
+    <meta property="og:url" content="https://qsrpro.app/">
+    <meta property="og:title" content="QSRPro - Troubleshooting Platform for Quick-Service Restaurants">
+    <meta property="og:description" content="Revolutionary troubleshooting platform for QSR equipment. Get instant solutions for all your restaurant equipment.">
+    <meta property="og:image" content="https://qsrpro.app/assets/og-image.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://fields-iq.com/">
-    <meta property="twitter:title" content="ClarityFlow - Deterministic Workflows for Device Activation">
-    <meta property="twitter:description" content="A unified activation engine for carriers, retailers, and service providers.">
-    <meta property="twitter:image" content="https://fields-iq.com/assets/logo/FieldsIQ logo.png">
+    <meta property="twitter:url" content="https://qsrpro.app/">
+    <meta property="twitter:title" content="QSRPro - Troubleshooting Platform for Quick-Service Restaurants">
+    <meta property="twitter:description" content="Revolutionary troubleshooting platform for QSR equipment. Get instant solutions for all your restaurant equipment.">
+    <meta property="twitter:image" content="https://qsrpro.app/assets/og-image.jpg">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/logo/FieldsIQ logo.png">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,568 +31,545 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="qsrpro/styles.css">
     
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        /* Fields-IQ Specific Styles */
-        :root {
-            --primary-color: #2563EB;
-            --primary-dark: #1D4ED8;
-            --secondary-color: #FF6B35;
-            --text-dark: #1a1a1a;
-            --text-light: #666;
-            --bg-light: #f8f9fa;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            overflow-x: hidden;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Navigation */
-        .navbar {
-            display: none;
-        }
-
-        .nav-container {
-            display: none;
-        }
-
-        .nav-logo {
-            display: none;
-        }
-
-        .nav-menu {
-            display: none;
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            background: linear-gradient(135deg, #f0f4ff 0%, #e8f0ff 100%);
-            overflow: hidden;
-            margin-top: 0;
-            padding-top: 0;
-            padding-bottom: 20px;
-        }
-
-        .hero-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            width: 100%;
-        }
-
-        .hero-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: flex-start;
-            min-height: auto;
-            padding: 20px 0;
-        }
-
-        .hero-text {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            position: relative;
-            padding-top: 0;
-        }
-
-        .logo-top-right {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            height: 60px;
-            width: auto;
-            z-index: 1000;
-        }
-
-        .hero-video {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-        }
-
-        .video-wrapper {
-            width: 100%;
-            max-width: 350px;
-            border-radius: 45px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-            position: relative;
-        }
-
-        .play-button-overlay {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80px;
-            height: 80px;
-            background: rgba(255, 255, 255, 0.5);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 10;
-            cursor: pointer;
-            transition: opacity 0.3s ease;
-        }
-
-        .play-button-overlay.hidden {
-            display: none;
-        }
-
-        .play-button-overlay::after {
-            content: '▶';
-            font-size: 40px;
-            color: rgba(255, 255, 255, 0.8);
-            margin-left: 4px;
-        }
-
-        .video-wrapper video {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .hero-title {
-            font-size: 2rem;
-            font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 0.5rem;
-            color: var(--text-dark);
-        }
-
-        .hero-subtitle {
-            font-size: 1.5rem;
-            font-weight: 500;
-            color: var(--text-light);
-            margin-bottom: 1rem;
-            line-height: 1.4;
-        }
-
-        .gradient-text {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .title-separator {
-            display: inline-block;
-            margin: 0 0.5rem;
-            color: var(--primary-color);
-            font-size: 0.8em;
-            opacity: 0.6;
-        }
-
-        .hero-description {
-            font-size: 1.1rem;
-            color: var(--text-light);
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 0;
-            justify-content: center;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: 500;
-            text-decoration: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            white-space: nowrap;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-            color: white;
-            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
-        }
-
-        .btn-secondary {
-            background: rgba(37, 99, 235, 0.1);
-            color: var(--primary-color);
-            border: 2px solid var(--primary-color);
-        }
-
-        .btn-secondary:hover {
-            background: var(--primary-color);
-            color: white;
-        }
-
-        /* Value Proposition Section */
-        .value-section {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-            color: white;
-            padding: 80px 0;
-        }
-
-        .value-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .value-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 3rem;
-            text-align: center;
-        }
-
-        .value-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .value-card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 12px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        .value-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.15);
-        }
-
-        .value-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .value-card h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .value-card p {
-            font-size: 1rem;
-            opacity: 0.9;
-            line-height: 1.6;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            background: white;
-            padding: 80px 0;
-        }
-
-        .contact-container {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .contact-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--text-dark);
-            margin-bottom: 1rem;
-        }
-
-        .contact-text {
-            font-size: 1.1rem;
-            color: var(--text-light);
-            margin-bottom: 2rem;
-        }
-
-        .contact-email {
-            display: inline-block;
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--primary-color);
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .contact-email:hover {
-            text-decoration: underline;
-        }
-
-        /* Footer */
-        .footer {
-            background: #1a1a1a;
-            color: white;
-            padding: 40px 0 20px;
-            text-align: center;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .footer-copyright {
-            font-size: 0.9rem;
-            color: #ccc;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-                gap: 0.5rem;
-            }
-
-            .hero-video {
-                order: -1;
-                margin-bottom: 0.5rem;
-            }
-
-            .hero-title {
-                font-size: 2.5rem;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-            }
-
-            .nav-menu {
-                gap: 1rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .value-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero-title {
-                font-size: 2rem;
-            }
-
-            .hero-description {
-                font-size: 1rem;
-            }
-
-            .btn {
-                padding: 10px 20px;
-                font-size: 14px;
-            }
-
-            .logo-top-right {
-                top: 5px;
-                left: 5px;
-                height: 50px;
-            }
-        }
-
-        /* Animations */
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hero-title {
-            animation: slideInLeft 1.2s ease-out;
-        }
-
-        .hero-description {
-            animation: slideInLeft 1.2s ease-out 0.3s both;
-        }
-
-        .hero-buttons {
-            animation: slideInLeft 1.2s ease-out 0.6s both;
-        }
-
-        .value-card {
-            animation: fadeInUp 1s ease-out forwards;
-            opacity: 0;
-        }
-
-        .value-card:nth-child(1) { animation-delay: 0.2s; }
-        .value-card:nth-child(2) { animation-delay: 0.4s; }
-        .value-card:nth-child(3) { animation-delay: 0.6s; }
-
-        section {
-            scroll-margin-top: 70px;
-        }
-    </style>
 </head>
 <body>
+    <!-- Side Navigation -->
+    <nav class="side-navbar">
+        <div class="side-nav-container">
+            <div class="side-nav-logo">
+                <a href="/" class="side-nav-logo-link">
+                    <img src="qsrpro/logo.png" alt="QSRPro Logo" class="side-nav-logo-img">
+                </a>
+            </div>
+            <ul class="side-nav-menu">
+                <li class="side-nav-item">
+                    <a href="#home" class="side-nav-link">Home</a>
+                </li>
+                <li class="side-nav-item">
+                    <a href="#features" class="side-nav-link">Features</a>
+                </li>
+                <li class="side-nav-item">
+                    <a href="#how-it-works" class="side-nav-link">How It Works</a>
+                </li>
+                <li class="side-nav-item">
+                    <a href="#equipment" class="side-nav-link">Equipment</a>
+                </li>
+                <li class="side-nav-item">
+                    <a href="#contact" class="side-nav-link">Contact</a>
+                </li>
+                <li class="side-nav-item">
+                    <a href="#early-access" class="side-nav-link side-cta-button">Early Access</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Toggle -->
+    <div class="mobile-menu-toggle">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+    </div>
+
+    <!-- Navigation Overlay -->
+    <div class="nav-overlay"></div>
+
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <img src="assets/logo/FieldsIQ logo.png" alt="Fields-IQ Logo" class="logo-top-right">
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1 class="hero-subtitle">
-                        <span class="gradient-text">ClarityFlow ✦ Deterministic Workflows</span>
+                    <h1 class="hero-title">
+                        <img src="qsrpro/logo.png" alt="QSRPro" class="hero-title-logo"> is now live.
                     </h1>
-                    <h2 class="hero-subtitle">Device Activation & Setup</h2>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">80+</span>
+                            <span class="stat-label">Equipment Categories</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">400+</span>
+                            <span class="stat-label">Real Products</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">4,000+</span>
+                            <span class="stat-label">Troubleshooting Flows</span>
+                        </div>
+                    </div>
                     <p class="hero-description">
-                        A unified activation engine for carriers, retailers, and service providers. 
-                        Eliminate guesswork with deterministic logic.
+                        Built for quick‑service restaurant operations, QSRPro delivers deterministic troubleshooting, structured workflows, and real‑time operational clarity across every location.
                     </p>
+                    <div class="demo-highlights">
+                        <p><strong>This demo highlights:</strong></p>
+                        <ul>
+                            <li>Multi‑brand equipment support</li>
+                            <li>Guided issue resolution</li>
+                            <li>Photo‑based verification</li>
+                            <li>Structured technician reporting</li>
+                            <li>Deep‑link navigation for every device and flow</li>
+                        </ul>
+                        <p class="mission-statement">
+                            QSRPro is part of our broader mission:<br>
+                            <strong>AI‑driven workflow infrastructure for multi‑location brands.</strong>
+                        </p>
+                    </div>
                     <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-secondary">
-                            <i class="fas fa-envelope"></i>
-                            Get in Touch
+                        <a href="#early-access" class="btn btn-primary">
+                            <i class="fas fa-play"></i>
+                            Join Early Access
+                        </a>
+                        <a href="#how-it-works" class="btn btn-secondary">
+                            <i class="fas fa-info-circle"></i>
+                            Learn More
                         </a>
                     </div>
                 </div>
-                <div class="hero-video">
-                    <div class="video-wrapper">
-                        <div class="play-button-overlay" id="playButtonOverlay"></div>
-                        <video id="demoVideo" controls>
-                            <source src="assets/videos/demo.mp4" type="video/mp4">
+                <div class="hero-image">
+                    <div class="video-container">
+                        <video autoplay muted loop playsinline class="hero-video">
+                            <source src="assets/videos/qsrpro.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="hero-background">
+            <div class="floating-icon" style="top: 20%; left: 10%;">
+                <i class="fas fa-fire"></i>
+            </div>
+            <div class="floating-icon" style="top: 60%; right: 15%;">
+                <i class="fas fa-cog"></i>
+            </div>
+            <div class="floating-icon" style="bottom: 30%; left: 20%;">
+                <i class="fas fa-tools"></i>
+            </div>
+        </div>
     </section>
 
-    <!-- Value Proposition Section -->
-    <section id="value" class="value-section">
-        <div class="value-container">
-            <h2 class="value-title">Why ClarityFlow</h2>
-            <div class="value-grid">
-                <div class="value-card">
-                    <div class="value-icon">✓</div>
-                    <h3>Deterministic Workflows</h3>
-                    <p>Eliminate guesswork with workflows that follow predictable, logical paths. Every activation follows the same proven process.</p>
+    <!-- Brand Logo Carousel -->
+    <section class="brand-carousel">
+        <p class="carousel-label">Trusted across major QSR brands</p>
+        <div class="carousel-track-wrapper">
+            <div class="carousel-track">
+                <div class="carousel-item"><img src="qsrpro/vertical_logos/subway.png" alt="Subway"></div>
+                <div class="carousel-item"><img src="qsrpro/vertical_logos/dominos.png" alt="Domino's"></div>
+                <div class="carousel-item"><img src="qsrpro/vertical_logos/wendys.png" alt="Wendy's"></div>
+                <div class="carousel-item"><img src="qsrpro/vertical_logos/panda-express.png" alt="Panda Express"></div>
+                <!-- Duplicate for seamless loop -->
+                <div class="carousel-item"><img src="qsrpro/vertical_logos/subway.png" alt="Subway"></div>
+                <div class="carousel-item"><img src="qsrpro/vertical_logos/dominos.png" alt="Domino's"></div>
+                <div class="carousel-item"><img src="qsrpro/vertical_logos/wendys.png" alt="Wendy's"></div>
+                <div class="carousel-item"><img src="qsrpro/vertical_logos/panda-express.png" alt="Panda Express"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Powerful Features for QSR Operations</h2>
+                <p class="section-description">
+                    Built specifically for the realities of quick-service restaurant equipment management
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-list-check"></i>
+                    </div>
+                    <h3 class="feature-title">Guided Flows</h3>
+                    <p class="feature-description">
+                        Step-by-step troubleshooting flows aligned with major OEM specifications and franchise standards.
+                    </p>
                 </div>
-                <div class="value-card">
-                    <div class="value-icon">🔄</div>
-                    <h3>Cross-Carrier, Cross-Device</h3>
-                    <p>Unified activation logic that works seamlessly across carriers, retailers, and service providers with different device types.</p>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3 class="feature-title">Evidence Capture</h3>
+                    <p class="feature-description">
+                        Document issues with photos and notes for faster escalation and resolution tracking.
+                    </p>
                 </div>
-                <div class="value-card">
-                    <div class="value-icon">⚡</div>
-                    <h3>Easy Integration</h3>
-                    <p>Integrate via WebView, SDK, or API. Get up and running quickly with minimal development overhead.</p>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Mobile-First</h3>
+                    <p class="feature-description">
+                        Access troubleshooting guides on-site with our responsive mobile application.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <h3 class="feature-title">Technician Collaboration</h3>
+                    <p class="feature-description">
+                        Contribute improvements and corrections to flows. Build institutional knowledge across your team.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="feature-title">Multi-Location Ready</h3>
+                    <p class="feature-description">
+                        Manage equipment troubleshooting across franchise groups and regional operators seamlessly.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="feature-title">Analytics & Insights</h3>
+                    <p class="feature-description">
+                        Track repair patterns, identify recurring issues, and optimize maintenance schedules.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How QSRPro Works</h2>
+                <p class="section-description">
+                    Get your equipment fixed in just a few simple steps
+                </p>
+            </div>
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Select Equipment</h3>
+                        <p class="step-description">
+                            Choose your equipment type and brand. QSRPro recognizes all major QSR equipment manufacturers.
+                        </p>
+                    </div>
+                    <div class="step-visual">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Describe the Issue</h3>
+                        <p class="step-description">
+                            Tell us what's wrong. Our system matches your issue to the most relevant troubleshooting flow.
+                        </p>
+                    </div>
+                    <div class="step-visual">
+                        <i class="fas fa-comment-dots"></i>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Follow Guided Steps</h3>
+                        <p class="step-description">
+                            Get clear, actionable instructions with photos and safety warnings for each diagnostic step.
+                        </p>
+                    </div>
+                    <div class="step-visual">
+                        <i class="fas fa-list-ol"></i>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Document & Resolve</h3>
+                        <p class="step-description">
+                            Capture evidence, document your findings, and escalate if needed. Track resolution status in real-time.
+                        </p>
+                    </div>
+                    <div class="step-visual">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Supported Equipment -->
+    <section id="equipment" class="equipment">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Supported Equipment</h2>
+                <p class="section-description">
+                    We support troubleshooting for all major QSR equipment categories
+                </p>
+            </div>
+            <div class="equipment-grid">
+                <div class="equipment-item">
+                    <div class="equipment-icon">🍟</div>
+                    <h3>Fryers</h3>
+                    <p>Deep fryers, pressure fryers, open pot fryers from all major brands</p>
+                </div>
+                <div class="equipment-item">
+                    <div class="equipment-icon">🍦</div>
+                    <h3>Ice Cream Machines</h3>
+                    <p>Soft serve machines, ice cream dispensers, freezers</p>
+                </div>
+                <div class="equipment-item">
+                    <div class="equipment-icon">🔥</div>
+                    <h3>Grills & Griddles</h3>
+                    <p>Flat top grills, char grills, griddles, broilers</p>
+                </div>
+                <div class="equipment-item">
+                    <div class="equipment-icon">🌡️</div>
+                    <h3>Refrigeration</h3>
+                    <p>Walk-in coolers, reach-in refrigerators, freezers, prep tables</p>
+                </div>
+                <div class="equipment-item">
+                    <div class="equipment-icon">🍕</div>
+                    <h3>Ovens</h3>
+                    <p>Conveyor ovens, deck ovens, combination ovens, warmers</p>
+                </div>
+                <div class="equipment-item">
+                    <div class="equipment-icon">🧊</div>
+                    <h3>Beverage Systems</h3>
+                    <p>Soda fountains, ice makers, beverage dispensers, coffee machines</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Early Access Section -->
+    <section id="early-access" class="early-access">
+        <div class="container">
+            <div class="early-access-content">
+                <div class="early-access-text">
+                    <h2 class="early-access-title">Be the First to Use QSRPro</h2>
+                    <p class="early-access-description">
+                        We're onboarding early partners now. Join franchise owners and technicians who are already 
+                        fixing equipment faster with QSRPro.
+                    </p>
+                    <div class="early-access-benefits">
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Early access to all features</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Dedicated onboarding support</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Lifetime early adopter pricing</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Direct input on product roadmap</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="early-access-form" id="earlyAccessForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="company" name="company" placeholder="Company Name">
+                    </div>
+                    <div class="form-group">
+                        <select id="role" name="role" required>
+                            <option value="">Select Your Role</option>
+                            <option value="franchise_owner">Franchise Owner</option>
+                            <option value="technician">Technician</option>
+                            <option value="regional_operator">Regional Operator</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="locations" name="locations" placeholder="Number of Locations" min="1">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large">
+                        <i class="fas fa-paper-plane"></i>
+                        Join Early Access
+                    </button>
+                    <p class="form-note">We'll be in touch within 24 hours.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="vision">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Built for the Realities of QSR Operations</h2>
+                <p class="section-description">
+                    QSRPro is designed with input from franchise owners, technicians, and regional operators
+                </p>
+            </div>
+            <div class="vision-grid">
+                <div class="vision-card">
+                    <div class="vision-number">1</div>
+                    <h3>No Guesswork</h3>
+                    <p>Clear, step-by-step flows eliminate confusion and reduce downtime. Every technician follows the same proven process.</p>
+                </div>
+                <div class="vision-card">
+                    <div class="vision-number">2</div>
+                    <h3>Brand-Specific</h3>
+                    <p>Flows are aligned with major OEM specifications and franchise standards. Get accurate guidance for your exact equipment.</p>
+                </div>
+                <div class="vision-card">
+                    <div class="vision-number">3</div>
+                    <h3>Continuous Improvement</h3>
+                    <p>Technicians contribute corrections and improvements. Future OEM validation ensures accuracy at scale.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="contact-container">
-            <h2 class="contact-title">Get in Touch</h2>
-            <p class="contact-text">
-                Interested in exploring ClarityFlow for your activation or troubleshooting workflows?
-            </p>
-            <a href="mailto:contact@fields-iq.com" class="contact-email">
-                contact@fields-iq.com
-            </a>
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="section-description">
+                    Have questions? We're here to help you get the most out of QSRPro
+                </p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email Us</h3>
+                            <p>support@qsrpro.app</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Call Us</h3>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Visit Us</h3>
+                            <p>123 Tech Street<br>San Francisco, CA 94105</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="contact-name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="contact-email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="contact-subject" name="subject" required>
+                            <option value="">Select Subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="support">Technical Support</option>
+                            <option value="sales">Sales Question</option>
+                            <option value="partnership">Partnership</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="contact-message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
+                </form>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-content">
-            <p class="footer-copyright">&copy; 2026 Fields-IQ LLC. All rights reserved.</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <a href="/" class="footer-logo-link">
+                            <img src="qsrpro/logo.png" alt="QSRPro Logo" class="footer-logo-img">
+                        </a>
+                    </div>
+                    <p class="footer-description">
+                        Revolutionary troubleshooting platform for quick-service restaurants. 
+                        Fix equipment faster with guided flows.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Product</h3>
+                    <ul class="footer-links">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#equipment">Equipment</a></li>
+                        <li><a href="#early-access">Early Access</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="qsrpro/before-you-being.html">Before You Begin</a></li>
+                        <li><a href="qsrpro/acceptable-use.html">Acceptable Use Policy</a></li>
+                        <li><a href="qsrpro/privacy.html">Privacy Policy</a></li>
+                        <li><a href="qsrpro/disclaimer.html">Legal Disclaimer</a></li>
+                        <li><a href="qsrpro/terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="qsrpro/delete-data.html">Data Deletion</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2026 QSRPro. All rights reserved. QSRPro is part of the DiagPro platform family.</p>
+                </div> Service</a>
+                    <a href="#">Delete Data</a>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <script src="assets/js/script.js"></script>
-    <script>
-        const playButtonOverlay = document.getElementById('playButtonOverlay');
-        const demoVideo = document.getElementById('demoVideo');
-
-        if (playButtonOverlay && demoVideo) {
-            playButtonOverlay.addEventListener('click', function(e) {
-                e.stopPropagation();
-                demoVideo.play();
-                playButtonOverlay.classList.add('hidden');
-            });
-
-            demoVideo.addEventListener('play', function() {
-                playButtonOverlay.classList.add('hidden');
-            });
-
-            demoVideo.addEventListener('pause', function() {
-                if (demoVideo.currentTime === 0) {
-                    playButtonOverlay.classList.remove('hidden');
-                }
-            });
-        }
-    </script>
+    <!-- JavaScript -->
+    <script src="qsrpro/script.js"></script>
 </body>
 </html>
