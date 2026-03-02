@@ -789,6 +789,7 @@ section {
     font-size: 1.2rem;
     margin-bottom: 2rem;
     opacity: 0.9;
+    color: white;
 }
 
 .early-access-benefits {
@@ -861,6 +862,7 @@ section {
     font-size: 0.9rem;
     opacity: 0.8;
     margin-top: 0.5rem;
+    color: white;
 }
 
 /* Vision Section */
