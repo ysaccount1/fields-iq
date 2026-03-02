@@ -69,64 +69,130 @@ document.addEventListener('DOMContentLoaded', function () {
     // Early Access Form Handling
     const earlyAccessForm = document.getElementById('earlyAccessForm');
     if (earlyAccessForm) {
-        earlyAccessForm.addEventListener('submit', function (e) {
+        earlyAccessForm.addEventListener('submit', async function (e) {
             e.preventDefault();
 
-            // Get form data
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
-
-            // Simulate form submission
             const submitBtn = this.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
 
+            // Disable button and show loading state
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitBtn.disabled = true;
 
-            setTimeout(() => {
-                submitBtn.innerHTML = '<i class="fas fa-check"></i> Thank You!';
-                submitBtn.style.background = '#28a745';
+            try {
+                const formData = new FormData(this);
+                const data = Object.fromEntries(formData);
 
-                // Reset form
+                const response = await fetch('/api/early-access', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    // Success
+                    submitBtn.innerHTML = '<i class="fas fa-check"></i> Thank You!';
+                    submitBtn.style.background = '#28a745';
+
+                    // Reset form after 3 seconds
+                    setTimeout(() => {
+                        this.reset();
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.style.background = '';
+                        submitBtn.disabled = false;
+                    }, 3000);
+                } else {
+                    // Error
+                    submitBtn.innerHTML = '<i class="fas fa-exclamation-circle"></i> Error';
+                    submitBtn.style.background = '#dc3545';
+                    alert(result.message || 'Failed to submit form. Please try again.');
+
+                    // Re-enable after 3 seconds
+                    setTimeout(() => {
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.style.background = '';
+                        submitBtn.disabled = false;
+                    }, 3000);
+                }
+            } catch (error) {
+                // Network error
+                submitBtn.innerHTML = '<i class="fas fa-exclamation-circle"></i> Error';
+                submitBtn.style.background = '#dc3545';
+                alert('Network error. Please check your connection and try again.');
+
                 setTimeout(() => {
-                    this.reset();
                     submitBtn.innerHTML = originalText;
                     submitBtn.style.background = '';
                     submitBtn.disabled = false;
                 }, 3000);
-            }, 2000);
+            }
         });
     }
 
     // Contact form handling
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
-        contactForm.addEventListener('submit', function (e) {
+        contactForm.addEventListener('submit', async function (e) {
             e.preventDefault();
 
-            // Get form data
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
-
-            // Simulate form submission
             const submitBtn = this.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
 
+            // Disable button and show loading state
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitBtn.disabled = true;
 
-            setTimeout(() => {
-                submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-                submitBtn.style.background = '#28a745';
+            try {
+                const formData = new FormData(this);
+                const data = Object.fromEntries(formData);
 
-                // Reset form
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    // Success
+                    submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+                    submitBtn.style.background = '#28a745';
+
+                    // Reset form after 3 seconds
+                    setTimeout(() => {
+                        this.reset();
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.style.background = '';
+                        submitBtn.disabled = false;
+                    }, 3000);
+                } else {
+                    // Error
+                    submitBtn.innerHTML = '<i class="fas fa-exclamation-circle"></i> Error';
+                    submitBtn.style.background = '#dc3545';
+                    alert(result.message || 'Failed to submit form. Please try again.');
+
+                    // Re-enable after 3 seconds
+                    setTimeout(() => {
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.style.background = '';
+                        submitBtn.disabled = false;
+                    }, 3000);
+                }
+            } catch (error) {
+                // Network error
+                submitBtn.innerHTML = '<i class="fas fa-exclamation-circle"></i> Error';
+                submitBtn.style.background = '#dc3545';
+                alert('Network error. Please check your connection and try again.');
+
                 setTimeout(() => {
-                    this.reset();
                     submitBtn.innerHTML = originalText;
                     submitBtn.style.background = '';
                     submitBtn.disabled = false;
                 }, 3000);
-            }, 2000);
+            }
         });
     }
 
