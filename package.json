@@ -1,0 +1,16 @@
+{
+  "name": "fields-iq-website",
+  "version": "1.0.0",
+  "description": "Fields-IQ QSRPro Website",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Static site - no build needed'",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.7"
+  },
+  "devDependencies": {
+    "vercel": "^33.0.0"
+  }
+}
