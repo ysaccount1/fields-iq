@@ -7,18 +7,18 @@ const nodemailer = require('nodemailer');
 // Create SMTP transporter
 function getTransporter() {
   const config = {
-    host: process.env.SMTP_HOST || 'smtp-relay.gmail.com',
-    port: parseInt(process.env.SMTP_PORT || '587'),
+    host: process.env.smtp_host || 'smtp-relay.gmail.com',
+    port: parseInt(process.env.smtp_port || '587'),
     secure: false,
     tls: {
       rejectUnauthorized: false
     }
   };
 
-  if (process.env.SMTP_USER) {
+  if (process.env.smtp_user) {
     config.auth = {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS,
+      user: process.env.smtp_user,
+      pass: process.env.smtp_pass,
     };
   }
 
@@ -30,10 +30,10 @@ async function sendEarlyAccessNotification(formData) {
   const { name, email, company, role, locations } = formData;
   const timestamp = new Date().toISOString();
   const transporter = getTransporter();
-  
+
   const mailOptions = {
-    from: process.env.SMTP_FROM || 'noreply@fields-iq.com',
-    to: process.env.ADMIN_EMAIL,
+    from: process.env.smtp_from || 'noreply@fields-iq.com',
+    to: process.env.admin_email,
     subject: 'New Early Access Request - QSRPro',
     text: `
 New Early Access Request
@@ -75,7 +75,7 @@ Submitted: ${timestamp}
 </div>
     `.trim()
   };
-  
+
   return await transporter.sendMail(mailOptions);
 }
 
@@ -83,9 +83,9 @@ Submitted: ${timestamp}
 async function sendEarlyAccessConfirmation(formData) {
   const { name, email } = formData;
   const transporter = getTransporter();
-  
+
   const mailOptions = {
-    from: process.env.SMTP_FROM || 'noreply@fields-iq.com',
+    from: process.env.smtp_from || 'noreply@fields-iq.com',
     to: email,
     subject: 'Thank You for Your Interest in QSRPro',
     text: `
@@ -111,7 +111,7 @@ The QSRPro Team
 </div>
     `.trim()
   };
-  
+
   return await transporter.sendMail(mailOptions);
 }
 
