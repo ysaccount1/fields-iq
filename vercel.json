@@ -13,11 +13,11 @@
     }
   ],
   "env": {
-    "SMTP_HOST": "email-smtp.us-east-1.amazonaws.com",
-    "SMTP_PORT": "587",
-    "SMTP_USER": "AKIAWXZX533LZNTYRR6Z",
-    "SMTP_PASS": "BDBwH0eyuGxnHAZWREnAs7v7758I5mdocghxQ+oWBLmt",
-    "SMTP_FROM": "noreply@fields-iq.com",
-    "ADMIN_EMAIL": "admin@fields-iq.com"
+    "SMTP_HOST": "@smtp_host",
+    "SMTP_PORT": "@smtp_port",
+    "SMTP_USER": "@smtp_user",
+    "SMTP_PASS": "@smtp_pass",
+    "SMTP_FROM": "@smtp_from",
+    "ADMIN_EMAIL": "@admin_email"
   }
 }
