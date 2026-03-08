@@ -1,10 +1,1 @@
-{
-  "buildCommand": "echo 'No build needed'",
-  "outputDirectory": ".",
-  "rewrites": [
-    {
-      "source": "/api/:path*",
-      "destination": "/api/:path*"
-    }
-  ]
-}
+{  "version": 2,  "builds": [    {      "src": "api/**/*.js",      "use": "@vercel/node"    }  ],  "routes": [    {      "src": "/api/(.*)",      "dest": "/api/$1"    }  ],  "env": {    "SMTP_HOST": "@smtp_host",    "SMTP_PORT": "@smtp_port",    "SMTP_USER": "@smtp_user",    "SMTP_PASS": "@smtp_pass",    "SMTP_FROM": "@smtp_from",    "ADMIN_EMAIL": "@admin_email"  }}
