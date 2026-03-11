@@ -91,7 +91,7 @@ Thank you for contacting QSRPro Support. We've received your message and will re
 Your message:
 ${message}
 
-If you need immediate assistance, please call us at +1 (555) 123-4567.
+If you need immediate assistance, please call us at +1 (929) 709-8666.
 
 Best regards,
 QSRPro Support Team
@@ -105,7 +105,7 @@ QSRPro Support Team
     <strong>Your message:</strong>
     <p style="margin-top: 10px; white-space: pre-wrap;">${message.replace(/\n/g, '<br>')}</p>
   </div>
-  <p>If you need immediate assistance, please call us at <strong>+1 (555) 123-4567</strong>.</p>
+  <p>If you need immediate assistance, please call us at <strong>+1 (929) 709-8666</strong>.</p>
   <p style="margin-top: 30px;">Best regards,<br>QSRPro Support Team</p>
 </div>
     `.trim()

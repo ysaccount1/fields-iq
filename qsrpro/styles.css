@@ -920,6 +920,14 @@ section {
     color: white;
 }
 
+.contact .section-title {
+    color: white;
+}
+
+.contact .section-description {
+    color: rgba(255, 255, 255, 0.9);
+}
+
 .contact-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
