@@ -560,7 +560,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.btn-primary').forEach(btn => {
         if (btn.textContent.includes('Join') || btn.textContent.includes('Try')) {
             btn.addEventListener('click', function (e) {
-                if (this.href === '#' || this.href.endsWith('#early-access')) {
+                if (this.href && (this.href === '#' || this.href.endsWith('#early-access'))) {
                     e.preventDefault();
 
                     const originalText = this.innerHTML;

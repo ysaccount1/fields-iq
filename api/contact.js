@@ -7,18 +7,18 @@ const nodemailer = require('nodemailer');
 // Create SMTP transporter
 function getTransporter() {
   const config = {
-    host: process.env.smtp_host || 'smtp-relay.gmail.com',
-    port: parseInt(process.env.smtp_port || '587'),
+    host: process.env.SMTP_HOST || process.env.smtp_host || 'smtp-relay.gmail.com',
+    port: parseInt(process.env.SMTP_PORT || process.env.smtp_port || '587'),
     secure: false,
     tls: {
       rejectUnauthorized: false
     }
   };
 
-  if (process.env.smtp_user) {
+  if (process.env.SMTP_USER || process.env.smtp_user) {
     config.auth = {
-      user: process.env.smtp_user,
-      pass: process.env.smtp_pass,
+      user: process.env.SMTP_USER || process.env.smtp_user,
+      pass: process.env.SMTP_PASS || process.env.smtp_pass,
     };
   }
 
@@ -32,8 +32,8 @@ async function sendContactNotification(formData) {
   const transporter = getTransporter();
 
   const mailOptions = {
-    from: process.env.smtp_from || 'noreply@fields-iq.com',
-    to: process.env.admin_email,
+    from: process.env.SMTP_FROM || process.env.smtp_from || 'noreply@fields-iq.com',
+    to: process.env.ADMIN_EMAIL || process.env.admin_email,
     subject: `Contact Form: ${subject} - QSRPro`,
     text: `
 New Contact Form Submission
@@ -80,7 +80,7 @@ async function sendContactConfirmation(formData) {
   const transporter = getTransporter();
 
   const mailOptions = {
-    from: process.env.smtp_from || 'noreply@fields-iq.com',
+    from: process.env.SMTP_FROM || process.env.smtp_from || 'noreply@fields-iq.com',
     to: email,
     subject: 'We Received Your Message - QSRPro Support',
     text: `
